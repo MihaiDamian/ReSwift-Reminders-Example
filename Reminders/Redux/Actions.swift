@@ -15,8 +15,9 @@ struct AddReminder: Action {
 
 struct UpdateReminder: Action {
     let reminder: Reminder
+    let index: Int
 }
 
 struct RemoveReminder: Action {
-    let reminde: Reminder
+    let index: Int
 }

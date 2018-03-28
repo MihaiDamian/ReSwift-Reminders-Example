@@ -37,12 +37,20 @@ class RemindersViewController: UITableViewController {
         }
         return cell
     }
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            mainStore.dispatch(RemoveReminder(index: indexPath.row))
+        }
+    }
 }
 
 extension RemindersViewController: StoreSubscriber {
     
     func newState(state: AppState) {
         reminders = state.reminders
+        tableView.reloadData()
     }
 }
 
@@ -52,11 +60,11 @@ extension RemindersViewController: ReminderCellDelegate {
         let indexPath = tableView.indexPath(for: cell)!
         if isNewReminderIndexPath(indexPath: indexPath) {
             mainStore.dispatch(AddReminder(reminder: Reminder(description: title)))
-            tableView.reloadData()
         } else {
-            var reminder = reminders[indexPath.row]
+            let index = indexPath.row
+            var reminder = reminders[index]
             reminder.description = title
-            mainStore.dispatch(UpdateReminder(reminder: reminder))
+            mainStore.dispatch(UpdateReminder(reminder: reminder, index: index))
         }
     }
 }

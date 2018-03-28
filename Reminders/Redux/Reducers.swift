@@ -15,9 +15,9 @@ func counterReducer(action: Action, state: AppState?) -> AppState {
     case let action as AddReminder:
         state.reminders.append(action.reminder)
     case let action as UpdateReminder:
-        state.reminders = state.reminders.map {
-            $0 == action.reminder ? action.reminder : $0
-        }
+        state.reminders[action.index] = action.reminder
+    case let action as RemoveReminder:
+        state.reminders.remove(at: action.index)
     default:
         break
     }

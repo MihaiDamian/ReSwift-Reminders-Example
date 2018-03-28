@@ -17,9 +17,3 @@ struct Reminder {
         self.description = description
     }
 }
-
-extension Reminder: Equatable {}
-
-func ==(lhs: Reminder, rhs: Reminder) -> Bool {
-    return lhs.description == rhs.description && lhs.dateAdded == rhs.dateAdded
-}

@@ -21,6 +21,10 @@ class ReminderCell: UITableViewCell {
 
 extension ReminderCell: UITextFieldDelegate {
     
+    override func prepareForReuse() {
+        titleInput.text = nil
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleInput.resignFirstResponder()
         delegate?.didChangeReminderTitle(cell: self, title: titleInput.text ?? "")

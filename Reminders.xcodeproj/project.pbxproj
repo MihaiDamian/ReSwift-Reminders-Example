@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB886287206B8AF500D7692D /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB886286206B8AF500D7692D /* Middleware.swift */; };
 		D79915312356C2A06AF32439 /* Pods_Reminders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A4AF958DD54562C7F03060 /* Pods_Reminders.framework */; };
 		E4173D85206A5BE3005733E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4173D84206A5BE3005733E9 /* AppDelegate.swift */; };
 		E4173D87206A5BE3005733E9 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4173D86206A5BE3005733E9 /* RemindersViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1FE8C45E2FCF6FA92B176D37 /* Pods-Reminders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminders.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminders/Pods-Reminders.release.xcconfig"; sourceTree = "<group>"; };
 		32A4AF958DD54562C7F03060 /* Pods_Reminders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reminders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB886286206B8AF500D7692D /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
 		CB92A4E388FC293DA218D965 /* Pods-Reminders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminders.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reminders/Pods-Reminders.debug.xcconfig"; sourceTree = "<group>"; };
 		E4173D81206A5BE3005733E9 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4173D84206A5BE3005733E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E436E6C1206A5FE8009E1D25 /* State.swift */,
 				E436E6C6206A60E0009E1D25 /* Actions.swift */,
 				E436E6C8206A616E009E1D25 /* Reducers.swift */,
+				CB886286206B8AF500D7692D /* Middleware.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E436E6C9206A616E009E1D25 /* Reducers.swift in Sources */,
+				CB886287206B8AF500D7692D /* Middleware.swift in Sources */,
 				E436E6C7206A60E0009E1D25 /* Actions.swift in Sources */,
 				E4173D87206A5BE3005733E9 /* RemindersViewController.swift in Sources */,
 				E436E6CE206A66EF009E1D25 /* ReminderCell.swift in Sources */,
